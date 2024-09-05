@@ -1,45 +1,19 @@
-# 🚀 Elevate Your Web Development Game with Admin Dashboard 🚀
+🎓 Bem-vindo ao Painel do Aluno - Alumni by Better 🎓
+Este é o portal oficial dos alunos da Alumni by Better. Através deste painel, você terá acesso a uma série de funcionalidades para tornar sua experiência acadêmica ainda mais completa, prática e interativa.
 
-Welcome to the future of web application development! Our Next.js Admin Dashboard Template is a powerhouse of innovation, designed to make your life as a developer smoother, more efficient, and incredibly stylish.
+🌟 Funcionalidades Incríveis para Você:
+✨ Aulas ao Vivo: Assista e reassista às suas aulas sempre que quiser.
 
-[Live demo here!](https://dashboard-template-nine.vercel.app/)
+✨ Fale com Professores: Conecte-se diretamente com os professores para tirar dúvidas e solicitar suporte.
 
+✨ Suporte Rápido: Solicite suporte facilmente para resolver qualquer questão acadêmica ou técnica.
 
-## 🌟 Features That Shine:
+✨ Níveis e Evolução: Acompanhe o seu progresso e veja em que nível está nas aulas.
 
-✨ Seamlessly integrated Next.js framework for blazing-fast performance and SEO-friendly routing.
+✨ Feedback Detalhado: Confira os feedbacks de seus professores sobre seu desempenho.
 
-✨ A stunning and intuitive user interface that your users will adore.
+✨ Pagamentos Simples: Troque sua forma de pagamento ou adicione novas opções para facilitar a gestão financeira.
 
-✨ Robust components and widgets for hassle-free customization.
+✨ Certificados: Veja sua evolução e baixe seus certificados de conclusão ao finalizar um curso.
 
-✨ Ready-made, beautifully crafted pages for a head start on your project.
-
-✨ Built-in authentication and authorization systems for secure data handling.
-
-✨ Responsive design that looks flawless on any device.
-
-✨ Easy-to-follow documentation to help you get started in no time.
-
-
-## 🔥 Ready to take your projects to the next level? Get started with this template now! 🔥
-
-![1](./public/github/Screenshot%202023-09-02%20at%2011.01.49%20PM.png)
-
-![1](./public/github/Screenshot%202023-09-02%20at%2011.04.15%20PM.png)
-
-![1](./public/github/Screenshot%202023-09-02%20at%2011.02.25%20PM.png)
-
-![1](./public/github/Screenshot%202023-09-02%20at%2011.03.03%20PM.png)
-
-![1](./public/github/Screenshot%202023-09-02%20at%2011.02.25%20PM.png)
-
-![1](./public/github/Screenshot%202023-09-02%20at%2011.03.18%20PM.png)
-
-![1](./public/github/Screenshot%202023-09-02%20at%2011.03.40%20PM.png)
-
-![1](./public/github/Screenshot%202023-09-02%20at%2011.03.58%20PM.png)
-
-![1](./public/github/Screenshot%202023-09-02%20at%2011.04.06%20PM.png)
-
-![1](./public/github/Screenshot%202023-09-02%20at%2011.04.57%20PM.png)
+Este painel foi desenvolvido para ser uma ferramenta completa, facilitando seu acesso ao conteúdo educacional e administrativo. Ele oferece um design intuitivo e uma interface responsiva para que você possa acessar seus recursos a qualquer momento e de qualquer dispositivo.
