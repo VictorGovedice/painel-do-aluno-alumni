@@ -1,22 +1,56 @@
 import { useRouter } from 'next/router';
-import { useState } from 'react';
-import { Box, TextField, Button, Typography } from '@mui/material';
+import { useState, useEffect } from 'react';
+import { TextField, Button, Typography, Checkbox, FormControlLabel, IconButton, InputAdornment } from '@mui/material';
+import { Visibility, VisibilityOff } from '@mui/icons-material';
 import BlankLayout from 'src/@core/layouts/BlankLayout';
 import Image from 'next/image';
+import { Box } from '@mui/material';
 
 const LoginPage = () => {
   const router = useRouter();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [rememberMe, setRememberMe] = useState(false);
+  const [showPassword, setShowPassword] = useState(false); // Controle da visibilidade da senha
   const [error, setError] = useState('');
+
+  useEffect(() => {
+    const savedUsername = localStorage.getItem('rememberMeUsername');
+    const savedPassword = localStorage.getItem('rememberMePassword');
+    if (savedUsername && savedPassword) {
+      setUsername(savedUsername);
+      setPassword(savedPassword);
+      setRememberMe(true);
+    }
+  }, []);
 
   const handleLogin = () => {
     if (username === 'RaphaelAlumni' && password === 'Ruiz@123') {
       localStorage.setItem('authToken', 'userAuthenticated');
+      
+      if (rememberMe) {
+        localStorage.setItem('rememberMeUsername', username);
+        localStorage.setItem('rememberMePassword', password);
+      } else {
+        localStorage.removeItem('rememberMeUsername');
+        localStorage.removeItem('rememberMePassword');
+      }
+
       router.push('/');
     } else {
       setError('Usuário ou senha inválidos');
     }
+  };
+
+  // Função para detectar a tecla Enter
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter') {
+      handleLogin();
+    }
+  };
+
+  const handleClickShowPassword = () => {
+    setShowPassword(!showPassword);
   };
 
   return (
@@ -77,16 +111,41 @@ const LoginPage = () => {
           margin="normal"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+          onKeyDown={handleKeyDown}
         />
         <TextField
           label="Password"
-          type="password"
+          type={showPassword ? 'text' : 'password'}  // Altera o tipo com base no estado
           fullWidth
           margin="normal"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          onKeyDown={handleKeyDown}
+          InputProps={{
+            endAdornment: (
+              <InputAdornment position="end">
+                <IconButton
+                  onClick={handleClickShowPassword}
+                  edge="end"
+                >
+                  {showPassword ? <VisibilityOff /> : <Visibility />}
+                </IconButton>
+              </InputAdornment>
+            )
+          }}
         />
         {error && <Typography color="error">{error}</Typography>}
+
+        {/* Checkbox de lembrar acesso */}
+        <FormControlLabel
+          control={
+            <Checkbox
+              checked={rememberMe}
+              onChange={(e) => setRememberMe(e.target.checked)}
+            />
+          }
+          label="Remember my login"
+        />
 
         {/* Botão de login */}
         <Button
